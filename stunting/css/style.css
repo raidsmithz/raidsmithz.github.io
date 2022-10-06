@@ -329,14 +329,14 @@ ul.btn li:last-child {
 
 .navigation.navbar-dark .navbar-nav .nav-link:focus,
 .navigation.navbar-dark .navbar-nav .nav-link:hover {
-     color: #51fe44;
+     color: #30eecb;
 }
 
 .navigation.navbar-dark .navbar-nav .active>.nav-link,
 .navigation.navbar-dark .navbar-nav .nav-link.active,
 .navigation.navbar-dark .navbar-nav .nav-link.show,
 .navigation.navbar-dark .navbar-nav .show>.nav-link {
-     color: #51fe44;
+     color: #30eecb;
 }
 
 .navbar-expand-md .navbar-nav {
@@ -365,8 +365,8 @@ ul.btn li:last-child {
 .header {
      width: 100%;
      padding: 20px 30px;
-     border-bottom: #000 solid 20px;
-     background-image: linear-gradient(to bottom, #1559b7, #4f7af3);
+     border-bottom: #1b274c solid 20px;
+     background-image: linear-gradient(to bottom, #1d43af, #4e76e7);
 }
 
 .logo a {
@@ -398,10 +398,10 @@ ul.btn li:last-child {
 
 .text-bg h1 {
      text-transform: uppercase;
-     color: #51fe44;
+     color: #30eecb;
      font-size: 90px;
      line-height: 80px;
-     padding-bottom: 35px;
+     padding-bottom: 0px;
      font-weight: bold;
 }
 
@@ -411,13 +411,14 @@ ul.btn li:last-child {
      font-size: 51px;
      line-height: 68px;
      font-weight: 700;
-     padding-bottom: 20px;
+     padding-bottom: 10px;
      display: block;
 }
 
 .text-bg p {
      line-height: 28px;
      font-weight: 500;
+     font-size: 20px;
      padding-bottom: 20px;
      display: block;
 }
@@ -506,7 +507,7 @@ ul.btn li:last-child {
 
 .titlepage {
      text-align: center;
-     padding-bottom: 60px;
+     padding-bottom: 50px;
 }
 
 .titlepage h2 {
@@ -545,7 +546,7 @@ ul.btn li:last-child {
 }
 
 .read_more:hover {
-     background: #51fe44;
+     background: #30eecb;
      color: #fff;
      transition: ease-in all 0.5s;
 }
@@ -603,7 +604,7 @@ ul.btn li:last-child {
      background: url(../images/about.png);
      background-size: 100% 100%;
      text-align: center;
-     min-height: 700px;
+     min-height: 580px;
 }
 
 .about .about_box h3 {
@@ -635,13 +636,54 @@ ul.btn li:last-child {
      padding-top: 70px;
 }
 
+.wedo .titlepage h2 {
+     font-size: 35px;
+     color: #090807;
+     line-height: 55px;
+     font-weight: bold;
+     padding: 0;
+     border-bottom: #0556c4 solid 1px;
+     max-width: 300px;
+     margin: auto;
+     text-align: center;
+}
+
 .wedo .titlepage p {
-     color: #141629;
+     color: rgba(17, 20, 46, 0.774);
      display: block;
      font-size: 17px;
      font-weight: bold;
-     text-align: center;
+     text-align: left;
      padding-top: 20px;
+}
+
+.tickbox li {
+     margin-left: 20px;
+     color: rgba(17, 20, 46, 0.774);
+     font-size: 17px;
+     font-weight: bold;  
+     text-align: left;
+     padding-bottom: 5px;
+     list-style: disc;
+}
+
+.wedo h2 {
+     margin-bottom: 0px;
+     color: rgba(17, 20, 46, 0.774);
+     display: block;
+     font-size: 25px;
+     font-weight: bold;
+     text-align: left;
+     padding-top: 30px;
+}
+
+.wedo p {
+     color: rgba(17, 20, 46, 0.774);
+     display: block;
+     font-size: 17px;
+     font-weight: bold;
+     text-align: left;
+     padding-bottom: 10px;
 }
 
 .work figure {
@@ -650,6 +692,7 @@ ul.btn li:last-child {
 
 .work figure img {
      width: 100%;
+     border-radius: 75px;
 }
 
 .work_text {
@@ -686,14 +729,17 @@ ul.btn li:last-child {
      font-weight: 700;
      padding-bottom: 10px;
      text-transform: uppercase;
+     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
 }
 
 .blu {
-     color: #51fe44;
+     color: #30eecb;
      font-size: 17px;
      line-height: 28px;
      font-weight: 600;
      text-transform: uppercase;
+     text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+
 }
 
 .wedo .read_more {
@@ -783,7 +829,7 @@ ul.btn li:last-child {
 }
 
 .testimonial_Carousel .carousel-indicators li.active {
-     background: #51fe44;
+     background: #30eecb;
 }
 
 #myCarousel .carousel-control-next-icon,
@@ -799,8 +845,9 @@ ul.btn li:last-child {
 
 .footer {
      background: #141629;
-     padding-top: 85px;
+     padding-top: 0px;
      text-align: center;
+     margin-top: 50px;
 }
 
 .footer .titlepage {
@@ -969,7 +1016,7 @@ ul.social_icon li a:hover {
 }
 
 .copyright {
-     margin-top: 70px;
+     margin-top: 0px;
      padding: 20px 0px;
 }
 
@@ -978,8 +1025,6 @@ ul.social_icon li a:hover {
      font-size: 18px;
      line-height: 22px;
      text-align: center;
-     border-top: #ddd solid 1px;
-     padding-top: 25px;
 }
 
 .copyright a {
