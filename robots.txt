@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raidsmithz.github.io/sitemap.xml

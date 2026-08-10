@@ -251,4 +251,56 @@
    */
   new PureCounter();
 
+  /**
+   * Lazy-load + shimmer effect for all content images
+   * - adds loading="lazy" to offscreen images
+   * - wraps each <img> in a .img-shimmer box that shows a shimmer placeholder
+   *   until the image decodes, then fades it in (no per-image HTML changes needed)
+   */
+  const initImageShimmer = () => {
+    const imgs = document.querySelectorAll('img:not([data-shimmered])');
+    imgs.forEach((img) => {
+      img.setAttribute('data-shimmered', '1');
+      img.setAttribute('loading', 'lazy');
+      img.setAttribute('decoding', 'async');
+
+      // wrap in shimmer container (skip tiny UI icons / svgs)
+      const isUiIcon = img.closest('.social-links, .navbar, .mobile-nav-toggle, .credits');
+      if (img.parentElement && !isUiIcon) {
+        const wrap = document.createElement('span');
+        wrap.className = 'img-shimmer';
+        wrap.style.display = 'inline-block';
+        wrap.style.lineHeight = '0';
+        img.parentNode.insertBefore(wrap, img);
+        wrap.appendChild(img);
+      } else if (img.parentElement && isUiIcon) {
+        // still shimmer but keep inline
+        img.parentElement.classList.add('img-shimmer');
+        img.parentElement.style.display = 'inline-block';
+      }
+
+      const markLoaded = () => {
+        const w = img.closest('.img-shimmer');
+        if (w) w.classList.add('img-loaded');
+        img.style.opacity = '1';
+      };
+
+      if (img.complete && img.naturalWidth > 0) {
+        markLoaded();
+      } else {
+        img.style.opacity = '0';
+        img.addEventListener('load', markLoaded);
+        img.addEventListener('error', markLoaded);
+      }
+    });
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initImageShimmer);
+  } else {
+    initImageShimmer();
+  }
+  // re-run after portfolio lightbox / late images appear
+  window.addEventListener('load', initImageShimmer);
+
 })()
